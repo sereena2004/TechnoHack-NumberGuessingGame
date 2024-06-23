@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	int n, guess,guesses=1;
+	srand(time(0));
+	n = rand()%100 + 1; 
+
+	do
+	{
+		printf("Guess the number between 1 to 100\n");
+		scanf("%d", &guess);
+		if(guess>n)
+		{
+			printf("you guessed to high\n");
+		}
+		else if(guess<n)
+		{
+			printf("you guessed too low\n");
+		}
+		else
+		{
+			printf("You guessed the correct number\n");
+			printf("attempts : %d\n", guesses);
+		}
+		guesses++;
+	} while(guess!=n);
+	
+	return 0;
+}
+
+
+/tmp/jLLULQ5Lt2.o
+Guess the number between 1 to 100
+54
+you guessed too low
+Guess the number between 1 to 100
+59
+you guessed too low
+Guess the number between 1 to 100
+60
+you guessed too low
+Guess the number between 1 to 100
+80
+you guessed too low
+Guess the number between 1 to 100
+90
+you guessed too low
+Guess the number between 1 to 100
+100
+You guessed the correct number
+attempts : 6
+
+
+=== Code Execution Successful ===
